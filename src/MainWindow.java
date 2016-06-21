@@ -93,7 +93,7 @@ public class MainWindow extends JFrame implements ActionListener{
 			int questionsBox = Math.round(Integer.parseInt(questions.getText()));
 			
 			//calculate total mistakes based on box values
-			int totalMistakes = (int) Math.round(mistakesBox+(4/4.)*questionsBox*blanksBox);
+			int totalMistakes = (int) Math.round(mistakesBox+(questionsBox/5.)*questionsBox*blanksBox);
 			
 			//Manipulate/Use totalMistakes to figure out the letter grade, store the letter grade as a string,
 			//then put that string into the brackets of result.setText()
@@ -101,14 +101,14 @@ public class MainWindow extends JFrame implements ActionListener{
 			//update text of result label
 			//result.setText(totalMistakes+""); 
 			
-			//For myself to facilitate potential updating
+			//to facilitate potential updating
 			System.out.println("mistakes: "+mistakesBox+", questions: "+questionsBox+", blanks: "+blanksBox+", total mistakes: "+
 			totalMistakes);
 			
-			result.setText(grades[13-((int) Math.ceil(totalMistakes/((3/5.)*questionsBox)))]);
+			result.setText(grades[13-((int) Math.ceil(totalMistakes/((questionsBox/5.)*questionsBox)))]);
 
-			System.out.println("grades["+(13-((int) Math.ceil(totalMistakes/((3/5.)*questionsBox))))+
-					"], result: "+grades[(13-((int) Math.ceil(totalMistakes/((3/5.)*questionsBox))))]);
+			System.out.println("grades["+(13-((int) Math.ceil(totalMistakes/((questionsBox/5.)*questionsBox))))+
+					"], result: "+grades[(13-((int) Math.ceil(totalMistakes/((questionsBox/5.)*questionsBox))))]);
 					
 			
 		}
