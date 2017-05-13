@@ -1,4 +1,4 @@
-# homeworkGrader
+# HomeworkGrader
 I wrote this program in order to help me evaluate and grade homework for grades 2 and 3 while working as 
 an English teacher at a Saturday School. I found the grading part of correcting very repetitive and made my own
 system to speed up the process. This program takes into account the total number of mistakes, questions, and blanks.
